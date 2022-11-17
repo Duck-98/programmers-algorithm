@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 재귀함수 2진수 변환
+
+      let result = "";
+      let x;
+      while (true) {
+        if (x % 2 == 0) {
+          result += "0";
+        } else {
+          result += "1";
+        }
+        x = Math.floor(x / 2);
+        if ((x == 1) | (x == 0)) {
+          result += String(x);
+        }
+      }
+      console.log(result);
+    </script>
+  </body>
+</html>
