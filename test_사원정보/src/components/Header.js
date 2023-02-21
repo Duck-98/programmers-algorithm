@@ -29,6 +29,23 @@ class Header {
       "menu_signup",
       "SIGNUP",
     );
+    // HOME 메뉴 클릭 이벤트
+    home_menu.addEventListener("click", () => {
+      window.history.pushState("", "", "/web/");
+      const urlChange = new CustomEvent("urlchange", {
+        detail: { href: "/web/" },
+      });
+      document.dispatchEvent(urlChange);
+    });
+
+    // SIGNUP 메뉴 클릭 이벤트
+    signup_menu.addEventListener("click", () => {
+      window.history.pushState("", "", "/web/signup");
+      const urlChange = new CustomEvent("urlchange", {
+        detail: { href: "/web/signup" },
+      });
+      document.dispatchEvent(urlChange);
+    });
   }
 }
 
